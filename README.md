@@ -1,3 +1,3 @@
 # Cadastro-de-Pets
 
-Projeto onde era necessario criar em linguagem C um cadastro de animais
+Primeiro projeto de Estrutura de Dados A onde era necessario um cadastro de animais usando apenas linguagem C
