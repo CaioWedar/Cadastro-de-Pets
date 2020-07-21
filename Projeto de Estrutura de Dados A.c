@@ -1,11 +1,3 @@
-/*
-Nome: Caio Alves Fagundes 					RA:19668771
-Nome: Paulo Ballardini Souza Campos			RA:19245307
-Opcionais funcionando:Opicinal 1(data e hora do cadastro e alt) e Opcional 2(interface grafica)
-Valor do Projeto:  _______ pontos
-*/
-
-
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
@@ -121,7 +113,7 @@ int main()
             exit(1);
 
         default:
-            printf("Número Inválido\n");
+            printf("NÃºmero InvÃ¡lido\n");
             system("pause");
             system("cls");
             break;
@@ -143,23 +135,23 @@ void cadastro(pets (**raiz), int cont)
 
     novo->prox=NULL;
 
-    printf("Dígite o nome do animal: \n");
+    printf("DÃ­gite o nome do animal: \n");
     fflush(stdin);
     scanf("%s", novo->nome);
 
-    printf("Dígite a especíe do animal: \n");
+    printf("DÃ­gite a especÃ­e do animal: \n");
     fflush(stdin);
     scanf("%s", novo->especie);
 
-    printf("Dígite a raça do animal: \n");
+    printf("DÃ­gite a raÃ§a do animal: \n");
     fflush(stdin);
     scanf("%s", novo->raca);
 
-    printf("Dígite o sexo do animal: \n");
+    printf("DÃ­gite o sexo do animal: \n");
     fflush(stdin);
     scanf("%c", &novo->sexo);
 
-    printf("Dígite a idade do animal: \n");
+    printf("DÃ­gite a idade do animal: \n");
     scanf("%d", &novo->idade);
 
     printf("Informe caracteristicas do animal: \n");
@@ -196,7 +188,7 @@ void busca(pets *raiz)
 
     if(raiz==NULL)
 	{
-    	printf("Não foram feitos cadastros\n");
+    	printf("NÃ£o foram feitos cadastros\n");
     	system("pause");
     	
     	return;
@@ -212,8 +204,8 @@ void busca(pets *raiz)
 	{
         printf("1. Busca por nome.\n");
         printf("2. Busca por especie.\n");
-        printf("3. Busca por especie e raça.\n");
-        printf("4. Busca por especie, raça e sexo.\n");
+        printf("3. Busca por especie e raÃ§a.\n");
+        printf("4. Busca por especie, raÃ§a e sexo.\n");
         printf("0. Sair do menu\n");
         printf("->: ");
         scanf("%d", &opcao);
@@ -222,7 +214,7 @@ void busca(pets *raiz)
         {
         case 1:
             system("cls");
-            printf("Dígite o nome do animal: \n");
+            printf("DÃ­gite o nome do animal: \n");
             fflush(stdin);
             scanf("%s", novo->nome);
 
@@ -232,17 +224,17 @@ void busca(pets *raiz)
                 {
                 	printf("---------ID %d---------\n", raiz->id);
                     printf("Nome: %s\n", raiz->nome);
-                    printf("Espécie: %s\n", raiz->especie);
-                    printf("Raça: %s\n", raiz->raca);                  
+                    printf("EspÃ©cie: %s\n", raiz->especie);
+                    printf("RaÃ§a: %s\n", raiz->raca);                  
                     printf("Sexo: %c\n", raiz->sexo);
                     printf("Idade: %d\n", raiz->idade);
-                    printf("Características: %s\n", raiz->carac);
+                    printf("CaracterÃ­sticas: %s\n", raiz->carac);
                     printf("O cadastro foi feito em %s\n", ctime(&raiz->cad));
                     if(ctime(&raiz->alt)==NULL)
                     {
-                    	printf("Não houve alteração\n");
+                    	printf("NÃ£o houve alteraÃ§Ã£o\n");
 					}else{
-						printf("A sua ultima alteração foi feita em %s\n", ctime(&raiz->alt));	
+						printf("A sua ultima alteraÃ§Ã£o foi feita em %s\n", ctime(&raiz->alt));	
 					}
                     printf("______________________________________\n");
                     
@@ -251,7 +243,7 @@ void busca(pets *raiz)
             }
             if(flag == 0)
             {
-            	printf("\nCadastro não encontrado\n");
+            	printf("\nCadastro nÃ£o encontrado\n");
 			}
             raiz = aux;
             system("pause");
@@ -260,7 +252,7 @@ void busca(pets *raiz)
 
         case 2:
             system("cls");
-            printf("Dígite a espécie do animal: \n");
+            printf("DÃ­gite a espÃ©cie do animal: \n");
             fflush(stdin);
             scanf("%s", novo->especie);
             
@@ -270,17 +262,17 @@ void busca(pets *raiz)
                 {
 					printf("---------iD %d---------\n", raiz->id);
                     printf("Nome: %s\n", raiz->nome);
-                    printf("Espécie: %s\n", raiz->especie);
-                    printf("Raça: %s\n", raiz->raca);                  
+                    printf("EspÃ©cie: %s\n", raiz->especie);
+                    printf("RaÃ§a: %s\n", raiz->raca);                  
                     printf("Sexo: %c\n", raiz->sexo);
                     printf("Idade: %d\n", raiz->idade);
-                    printf("Características: %s", raiz->carac);
+                    printf("CaracterÃ­sticas: %s", raiz->carac);
                     printf("O cadastro foi feito em %s\n", ctime(&raiz->cad));
                     if(ctime(&raiz->alt)==NULL)
                     {
-                    	printf("Não houve alteração\n");
+                    	printf("NÃ£o houve alteraÃ§Ã£o\n");
 					}else{
-						printf("A sua ultima alteração foi feita em %s\n", ctime(&raiz->alt));	
+						printf("A sua ultima alteraÃ§Ã£o foi feita em %s\n", ctime(&raiz->alt));	
 					}
                     printf("______________________________________\n");
 					flag = 1;                 
@@ -289,7 +281,7 @@ void busca(pets *raiz)
             }
             if(flag == 0)
             {
-            	printf("Cadastro não encontrado\n");
+            	printf("Cadastro nÃ£o encontrado\n");
 			}
             raiz = aux;
             system("pause");
@@ -299,10 +291,10 @@ void busca(pets *raiz)
 
         case 3:
             system("cls");
-            printf("Dígite a espécie do animal: \n");
+            printf("DÃ­gite a espÃ©cie do animal: \n");
             fflush(stdin);
             scanf("%s", novo->especie);
-            printf("Dígite a raça do animal: \n");
+            printf("DÃ­gite a raÃ§a do animal: \n");
             fflush(stdin);
             scanf("%s", novo->raca);
 
@@ -314,17 +306,17 @@ void busca(pets *raiz)
                     {
 						printf("---------iD %d---------\n", raiz->id);
                     	printf("Nome: %s\n", raiz->nome);
-                    	printf("Espécie: %s\n", raiz->especie);
-                    	printf("Raça: %s\n", raiz->raca);                  
+                    	printf("EspÃ©cie: %s\n", raiz->especie);
+                    	printf("RaÃ§a: %s\n", raiz->raca);                  
                 		printf("Sexo: %c\n", raiz->sexo);
                 		printf("Idade: %d\n", raiz->idade);
-                    	printf("Características: %s\n", raiz->carac);
+                    	printf("CaracterÃ­sticas: %s\n", raiz->carac);
                     	printf("O cadastro foi feito em %s\n", ctime(&raiz->cad));
                     	if(ctime(&raiz->alt)==NULL)
                     		{
-                    			printf("Não houve alteração\n");
+                    			printf("NÃ£o houve alteraÃ§Ã£o\n");
 							}else{
-								printf("A sua ultima alteração foi feita em %s\n", ctime(&raiz->alt));	
+								printf("A sua ultima alteraÃ§Ã£o foi feita em %s\n", ctime(&raiz->alt));	
 							}
                     	printf("______________________________________\n");                     
                     }					
@@ -333,7 +325,7 @@ void busca(pets *raiz)
             }
             if(flag == 0)
             {
-            	printf("\nCadastro não encontrado\n");
+            	printf("\nCadastro nÃ£o encontrado\n");
 			}
             raiz = aux;
             system("pause");
@@ -342,13 +334,13 @@ void busca(pets *raiz)
 
         case 4:
             system("cls");
-            printf("Dígite a espécie do animal: \n");
+            printf("DÃ­gite a espÃ©cie do animal: \n");
             fflush(stdin);
             scanf("%s", novo->especie);
-            printf("Dígite a raça do animal: \n");
+            printf("DÃ­gite a raÃ§a do animal: \n");
             fflush(stdin);
             scanf("%s", novo->raca);
-            printf("Dígite o sexo do animal: \n");
+            printf("DÃ­gite o sexo do animal: \n");
             fflush(stdin);
             scanf("%c", &novo->sexo);
 
@@ -362,17 +354,17 @@ void busca(pets *raiz)
                         {
 							printf("---------iD %d---------\n", raiz->id);
                     		printf("Nome: %s\n", raiz->nome);
-                   			printf("Espécie: %s\n", raiz->especie);
-                    		printf("Raça: %s\n", raiz->raca);                  
+                   			printf("EspÃ©cie: %s\n", raiz->especie);
+                    		printf("RaÃ§a: %s\n", raiz->raca);                  
                    			printf("Sexo: %c\n", raiz->sexo);
                    			printf("Idade: %d\n", raiz->idade);
-                    		printf("Características: %s", raiz->carac);
+                    		printf("CaracterÃ­sticas: %s", raiz->carac);
                     		printf("O cadastro foi feito em %s\n", ctime(&raiz->cad));
                     		if(ctime(&raiz->alt)==NULL)
                     			{
-                    				printf("Não houve alteração\n");
+                    				printf("NÃ£o houve alteraÃ§Ã£o\n");
 								}else{
-									printf("A sua ultima alteração foi feita em %s\n", ctime(&raiz->alt));	
+									printf("A sua ultima alteraÃ§Ã£o foi feita em %s\n", ctime(&raiz->alt));	
 								}
                     		printf("______________________________________\n");                          	
                         }
@@ -383,7 +375,7 @@ void busca(pets *raiz)
             }
             if(flag == 0)
             {
-            	printf("Cadastro não encontrado\n");
+            	printf("Cadastro nÃ£o encontrado\n");
 			}
             raiz = aux;
             system("pause");
@@ -404,7 +396,7 @@ void listar(pets *raiz)
     
     if(raiz==NULL)
     {
-    	printf("Não foram feitos cadastros\n");
+    	printf("NÃ£o foram feitos cadastros\n");
     	system("pause");
     	return;
 	}
@@ -413,7 +405,7 @@ void listar(pets *raiz)
     if(novo==NULL) return;
 
     printf("1. Listagem e contagem de cadastros\n");
-    printf("2. Contagem por espécie\n");
+    printf("2. Contagem por espÃ©cie\n");
     printf("0. Sair\n");
     printf("->: ");
     scanf("%d", &menu);
@@ -428,28 +420,28 @@ void listar(pets *raiz)
         {
             printf("---------iD %d---------\n", raiz->id);
             printf("Nome: %s\n", raiz->nome);
-            printf("Espécie: %s\n", raiz->especie);
-            printf("Raça: %s\n", raiz->raca);                  
+            printf("EspÃ©cie: %s\n", raiz->especie);
+            printf("RaÃ§a: %s\n", raiz->raca);                  
             printf("Sexo: %c\n", raiz->sexo);
             printf("Idade: %d\n", raiz->idade);
-            printf("Características: %s\n", raiz->carac);
+            printf("CaracterÃ­sticas: %s\n", raiz->carac);
             printf("O cadastro foi feito em %s\n", ctime(&raiz->cad));
             if(ctime(&raiz->alt)==NULL)
                 {
-                    printf("Não houve alteração\n");
+                    printf("NÃ£o houve alteraÃ§Ã£o\n");
 				}else{
-					printf("A sua ultima alteração foi feita em %s\n", ctime(&raiz->alt));	
+					printf("A sua ultima alteraÃ§Ã£o foi feita em %s\n", ctime(&raiz->alt));	
 				}
             printf("______________________________________\n");
             raiz=raiz->prox;
             cont++;
         }
-        printf("O total de animais cadastrados é: %d.\n", cont);
+        printf("O total de animais cadastrados Ã©: %d.\n", cont);
         system("pause");
         return;
 
     case 2:
-        printf("Dígite a espécie do animal: \n");
+        printf("DÃ­gite a espÃ©cie do animal: \n");
         fflush(stdin);
         scanf("%s", novo->especie);
         while(raiz != NULL)
@@ -462,12 +454,12 @@ void listar(pets *raiz)
         }
         if(cont2==0)
         {
-        printf("Esta espécie não está cadastrada\n");
+        printf("Esta espÃ©cie nÃ£o estÃ¡ cadastrada\n");
         system("pause");
         system("cls");
 		break;
         }else{
-        printf("O total de %s cadastrados é: %d.\n", novo->especie,cont2);
+        printf("O total de %s cadastrados Ã©: %d.\n", novo->especie,cont2);
         system("pause");
         return;
 		}
@@ -482,7 +474,7 @@ void alterar (pets (**raiz))
 {
 	if((*raiz)==NULL)
 	{
-		printf("Não foram feitos cadastros\n");
+		printf("NÃ£o foram feitos cadastros\n");
     	system("pause");
     	
     	return;
@@ -493,7 +485,7 @@ void alterar (pets (**raiz))
 	
 	aux=(*raiz);
 	
-	printf("Escolha o id do cadastro para alteração: \n");
+	printf("Escolha o id do cadastro para alteraÃ§Ã£o: \n");
 	printf("->: ");
 	scanf("%d", &idt);
 	
@@ -503,23 +495,23 @@ void alterar (pets (**raiz))
 	{
 		if(aux->id==idt)
 		{
-   			printf("Dígite o nome do animal: \n");
+   			printf("DÃ­gite o nome do animal: \n");
     		fflush(stdin);
 	    	scanf("%s", aux->nome);
 
-    		printf("Dígite a especíe do animal: \n");
+    		printf("DÃ­gite a especÃ­e do animal: \n");
     		fflush(stdin);
     		scanf("%s", aux->especie);
 
-    		printf("Dígite a raça do animal: \n");
+    		printf("DÃ­gite a raÃ§a do animal: \n");
     		fflush(stdin);
     		scanf("%s", aux->raca);
 
-    		printf("Dígite o sexo do animal: \n");
+    		printf("DÃ­gite o sexo do animal: \n");
     		fflush(stdin);
     		scanf("%c", &aux->sexo);
 
-    		printf("Dígite a idade do animal: \n");
+    		printf("DÃ­gite a idade do animal: \n");
     		scanf("%d", &aux->idade);
 
     		printf("Informe caracteristicas do animal: \n");
@@ -541,7 +533,7 @@ void deletar(pets (**raiz))
 {
 	if((*raiz)==NULL)
 	{
-		printf("Não foram feitos cadastros\n");
+		printf("NÃ£o foram feitos cadastros\n");
     	system("pause");
     	
     	return;
